@@ -97,3 +97,11 @@ def largest_numeric_value_alt(lst):
     return max(numeric_lst)
 print(largest_numeric_value_alt([1, 2, 3, "four", 5.0, 6]))
 print(largest_numeric_value_alt(["one", "two", "three"]))
+
+# Treats repeat letters as the same
+# E.g., "abb" wil not have "bab" twice 
+from itertools import permutations
+def all_permutations(string):
+    return set(''.join(p) for p in permutations(string))
+print (all_permutations("BAB"))
+print(all_permutations("hello"))
