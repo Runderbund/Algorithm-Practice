@@ -103,5 +103,20 @@ print(largest_numeric_value_alt(["one", "two", "three"]))
 from itertools import permutations
 def all_permutations(string):
     return set(''.join(p) for p in permutations(string))
-print (all_permutations("BAB"))
+print(all_permutations("BAB"))
 print(all_permutations("hello"))
+
+def all_permutations_alt(string):
+    if len(string) == 0:
+        return {''}
+    first_char = string[0]
+    remaining_chars = string[1:]
+    smaller_permutations = all_permutations_alt(remaining_chars)
+    permutations = set()
+    for permutation in smaller_permutations:
+        for i in range(len(permutation) + 1):
+            new_perm = permutation[:i] + first_char + permutation[i:]
+            permutations.add(new_perm)
+    return permutations
+print(all_permutations("bab"))
+print(all_permutations("HELLO"))
