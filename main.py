@@ -79,3 +79,13 @@ def pig_latin_converter(string):
     return " ".join(pig_latin_words)
 print(pig_latin_converter("The quick brown fox"))
 print(pig_latin_converter("Hello World!"))
+
+def largest_numeric_value(lst):
+    max_num = None
+    for num in lst:
+        if isinstance(num, (int, float)):
+            if max_num is None or num > max_num:
+                max_num = num
+    return max_num
+print(largest_numeric_value([1, 2, 3, "four", 5.0, 6]))
+print(largest_numeric_value(["one", "two", "three"]))
