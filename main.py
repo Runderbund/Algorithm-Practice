@@ -41,3 +41,12 @@ def count_vowels_consonants(string):
     return {"vowels": vowel_count, "consonants": consonant_count}
 print(count_vowels_consonants("Hello World!"))
 print(count_vowels_consonants("The quick brown fox jumps over the lazy dog."))
+
+def sum_numerical_values(string):
+    total = 0
+    for word in string.split():
+        if word.isnumeric():
+            total += int(word)
+    return total
+
+print(sum_numerical_values("The quick brown 123 fox jumps over the 456 lazy dog."))
