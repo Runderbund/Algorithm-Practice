@@ -68,3 +68,14 @@ def difference_from_15(num):
         return diff
 print(difference_from_15(-10))
 print(difference_from_15(10))
+
+# Assumes words are at least 2 characters long
+def pig_latin_converter(string):
+    words = string.split()
+    pig_latin_words = []
+    for word in words:
+        pig_latin_word = word[1:] + word[0] + "ay"
+        pig_latin_words.append(pig_latin_word)
+    return " ".join(pig_latin_words)
+print(pig_latin_converter("The quick brown fox"))
+print(pig_latin_converter("Hello World!"))
