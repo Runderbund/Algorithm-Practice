@@ -127,3 +127,22 @@ def convert_to_hours_and_minutes(num):
     return f"{hours} hours, {minutes} minutes"
 print (convert_to_hours_and_minutes(71))
 print (convert_to_hours_and_minutes(133))
+
+def is_anagram(string1, string2):
+    if len(string1) != len(string2):
+        return False
+    string1_counts = {}
+    string2_counts = {}
+    for char in string1:
+        if char in string1_counts:
+            string1_counts[char] += 1
+        else:
+            string1_counts[char] = 1
+    for char in string2:
+        if char in string2_counts:
+            string2_counts[char] += 1
+        else:
+            string2_counts[char] = 1
+    return string1_counts == string2_counts
+print(is_anagram("silent", "listen"))
+print(is_anagram("silent", "listens"))
