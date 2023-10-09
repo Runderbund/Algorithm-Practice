@@ -49,7 +49,6 @@ def sum_numerical_values(string):
         if word.isnumeric():
             total += int(word)
     return total
-
 print(sum_numerical_values("The quick brown 123 fox jumps over the 456 lazy dog."))
 
 # Treats numerical values as individual characters and sums them
@@ -59,5 +58,13 @@ def sum_numerical_values_alt(string):
         if char.isnumeric():
             total += int(char)
     return total
-
 print(sum_numerical_values_alt("The quick brown 123 fox jumps over the 456 lazy dog."))
+
+def difference_from_15(num):
+    diff = abs(num - 15)
+    if diff > 10:
+        return diff * 2
+    else:
+        return diff
+print(difference_from_15(-10))
+print(difference_from_15(10))
