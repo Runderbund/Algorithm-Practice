@@ -42,6 +42,7 @@ def count_vowels_consonants(string):
 print(count_vowels_consonants("Hello World!"))
 print(count_vowels_consonants("The quick brown fox jumps over the lazy dog."))
 
+# Assumes numerical values are separated by spaces and should be counted as a single value 
 def sum_numerical_values(string):
     total = 0
     for word in string.split():
@@ -50,3 +51,13 @@ def sum_numerical_values(string):
     return total
 
 print(sum_numerical_values("The quick brown 123 fox jumps over the 456 lazy dog."))
+
+# Treats numerical values as individual characters and sums them
+def sum_numerical_values_alt(string):
+    total = 0
+    for char in string:
+        if char.isnumeric():
+            total += int(char)
+    return total
+
+print(sum_numerical_values_alt("The quick brown 123 fox jumps over the 456 lazy dog."))
