@@ -120,3 +120,10 @@ def all_permutations_alt(string):
     return permutations
 print(all_permutations("bab"))
 print(all_permutations("HELLO"))
+
+def convert_to_hours_and_minutes(num):
+    hours = num // 60
+    minutes = num % 60
+    return f"{hours} hours, {minutes} minutes"
+print (convert_to_hours_and_minutes(71))
+print (convert_to_hours_and_minutes(133))
