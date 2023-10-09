@@ -89,3 +89,11 @@ def largest_numeric_value(lst):
     return max_num
 print(largest_numeric_value([1, 2, 3, "four", 5.0, 6]))
 print(largest_numeric_value(["one", "two", "three"]))
+
+def largest_numeric_value_alt(lst):
+    numeric_lst = [num for num in lst if isinstance(num, (int, float))]
+    if not numeric_lst:
+        return None
+    return max(numeric_lst)
+print(largest_numeric_value_alt([1, 2, 3, "four", 5.0, 6]))
+print(largest_numeric_value_alt(["one", "two", "three"]))
